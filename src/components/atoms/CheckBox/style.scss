@@ -1,0 +1,16 @@
+.checkbox-atoms {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+
+  .ant-checkbox-input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+}
