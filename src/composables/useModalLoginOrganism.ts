@@ -1,15 +1,46 @@
-import { useState } from 'react';
+import {useState} from 'react';
+import {validateEmail, validateEmpty} from "@/utils/commonUtils.ts";
+import {useNavigate} from 'react-router-dom';
+import {APP_ROUTE} from "@/constant/routes.ts";
+import {ErrorType} from "@/types/models/error.ts";
 
 export const useModalLoginOrganism = () => {
-  const [emailValue, setEmailValue] = useState<string>('');
-  const [passwordValue, setPasswordValue] = useState<string>('');
-  const [remember, setRemember] = useState<boolean>(false);
-  return {
-    emailValue,
-    passwordValue,
-    remember,
-    setEmailValue,
-    setPasswordValue,
-    setRemember,
-  };
+    const navigate = useNavigate()
+    const [emailValue, setEmailValue] = useState<string>('');
+    const [passwordValue, setPasswordValue] = useState<string>('');
+    const [remember, setRemember] = useState<boolean>(false);
+    const [errors, setErrors] = useState<Array<ErrorType>>([])
+
+    const handleClickLogin = () => {
+        const errorList: Array<ErrorType> = [];
+        if (!validateEmpty(emailValue) || !validateEmail(emailValue)) {
+            errorList.push({
+                name: 'email',
+                message: '有効なメールアドレスを入力してください',
+            })
+        }
+        if (!validateEmpty(passwordValue)) {
+            errorList.push({
+                name: 'password',
+                message: '有効なパスワードを入力してください',
+            })
+
+        }
+
+
+        if (errorList.length === 0) {
+            navigate(APP_ROUTE.PROMPT)
+        }
+        setErrors(errorList);
+    };
+    return {
+        emailValue,
+        passwordValue,
+        remember,
+        errors,
+        setEmailValue,
+        setPasswordValue,
+        setRemember,
+        handleClickLogin
+    };
 };

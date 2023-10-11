@@ -1,4 +1,4 @@
-import {LoginTemplate} from "@/components/templates/LoginTemplate/LoginTemplate.tsx";
+import {LoginTemplate} from "@/components/templates/LoginTemplate/index.tsx";
 import {LayoutLogin} from "@/layouts/LayoutLogin.tsx";
 
 export const LoginPage = () => {

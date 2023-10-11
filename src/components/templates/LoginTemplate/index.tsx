@@ -1,4 +1,4 @@
-import {ModalLoginOrganism} from "@/components/organisms/ModalLoginOrganism/ModalLoginOrganism.tsx";
+import {ModalLoginOrganism} from "@/components/organisms/ModalLoginOrganism/index.tsx";
 import logo from "@/assets/img/logo.png";
 import "@/components/templates/LoginTemplate/style.scss"
 
