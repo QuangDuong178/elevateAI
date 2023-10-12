@@ -16,4 +16,16 @@
     padding-inline-end: 0;
   }
 
+  .ant-checkbox .ant-checkbox-inner {
+    border-radius: 2px;
+    border: 1px solid #b8b8b8;
+    background-color: #00A6DA;
+
+
+  }
+
+  .ant-checkbox-wrapper-checked:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-inner, :where(.css-dev-only-do-not-override-pr0fja).ant-checkbox-checked:not(.ant-checkbox-disabled):hover .ant-checkbox-inner {
+    background-color: #00A6DA !important;
+    border-color: transparent;
+  }
 }

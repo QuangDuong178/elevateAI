@@ -4,19 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "start:dev": "vite --mode development --host",
+    "start:prod": "vite --mode production",
     "build": " vite build",
+    "build:dev": " vite --mode development build",
+    "build:prod": " vite --mode production build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "build:development": "copy .env.development .env && vite build",
-    "build:staging": "copy .env.staging .env && vite build",
-    "build:production": "copy .env.production .env && vite build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@mui/material": "^5.14.12",
     "@mui/styled-engine-sc": "^5.14.12",
     "antd": "^5.9.4",
     "autoprefixer": "^10.4.16",
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

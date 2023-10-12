@@ -11,7 +11,9 @@ export const useModalLoginOrganism = () => {
     const [remember, setRemember] = useState<boolean>(false);
     const [errors, setErrors] = useState<Array<ErrorType>>([])
 
-    const handleClickLogin = () => {
+    const handleClickLogin = async () => {
+        // const ctx = getCurrentInstance().appContext.config.globalProperties;
+
         const errorList: Array<ErrorType> = [];
         if (!validateEmpty(emailValue) || !validateEmail(emailValue)) {
             errorList.push({
@@ -29,7 +31,11 @@ export const useModalLoginOrganism = () => {
 
 
         if (errorList.length === 0) {
-            navigate(APP_ROUTE.PROMPT)
+            // const response: AxiosResponse<any> = await getRepository("login").login({
+            //     email: emailValue,
+            //     password: passwordValue
+            // })
+            navigate(APP_ROUTE.HOME)
         }
         setErrors(errorList);
     };

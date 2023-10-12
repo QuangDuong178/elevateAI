@@ -1,0 +1,305 @@
+.navigator-organism {
+  .open .menu-item {
+    padding: 16px 40px;
+  }
+
+  li + li {
+    border-bottom: 1px solid #f2f1f5;
+  }
+
+  .open .nav-list li .menu-item {
+    background-color: white;
+  }
+
+  .nav-list li .menu-item {
+    transition: background-color 0.5s,
+    padding 0.3s;
+  }
+
+  .nav-list li .menu-item:hover {
+    background: #00a6da;
+    color: white;
+  }
+
+  .menu-item {
+    transition: padding 0.3s;
+    padding: 12px 24px;
+    height: 62px;
+
+    background-color: #f2f1f5;
+  }
+
+  .name_job {
+    margin-bottom: 5px;
+  }
+
+  .menu-logo {
+    min-width: 30px;
+    max-width: 30px;
+    //margin: 0 10px 0 10px;
+  }
+
+  .menu-item .links_name {
+    transition: opacity 0.5s;
+  }
+
+  .open .navigator-collapse img {
+    transform: rotate(0deg);
+  }
+
+  .navigator-collapse img {
+    transform: rotate(-180deg);
+    height: 24px;
+    width: 24px;
+  }
+
+  .navigator-collapse {
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+
+  .navigator {
+    border-right: 2px solid #f2f1f5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-height: min-content;
+    //overflow-y: auto;
+    width: 78px;
+    background: #f2f1f5;
+    z-index: 99;
+    transition: all 0.5s ease;
+  }
+
+  .navigator.open {
+    width: 300px;
+  }
+
+  .navigator.open .logo-details {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+  }
+
+  .navigator .logo-details {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 40px 24px;
+  }
+
+  .navigator .logo-details .icon {
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+
+  .navigator .logo-details .logo-name {
+    white-space: nowrap;
+    overflow: hidden;
+    //transition-duration: 1s;
+    opacity: 1;
+    font-size: 32px;
+  }
+
+  .navigator.open .logo-details .logo-name {
+    //transition-duration: 1s;
+    opacity: 1;
+    font-size: 32px;
+  }
+
+  .navigator .logo-details #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .navigator.open .logo-details #btn {
+    text-align: right;
+  }
+
+  .navigator .image-icon {
+    height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 6px;
+  }
+
+  .navigator .nav-list {
+    background-color: white;
+  }
+
+  .navigator li {
+    position: relative;
+    list-style: none;
+  }
+
+  .navigator.open li .tooltip {
+    display: none;
+  }
+
+  .navigator li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .navigator li a .links_name {
+    //color: var(--menu-items-text-color);
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .navigator.open li a .links_name,
+  .navigator.open .logo-name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navigator li router-link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    //border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+
+  .navigator li router-link .links_name {
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .navigator.open li router-link .links_name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navigator li router-link:hover i {
+    transition: all 0.5s ease;
+  }
+
+  .navigator li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  .navigator div.profile {
+    position: relative;
+    height: 60px;
+    width: 78px;
+    /* left: 0;
+    bottom: 0; */
+    padding: 10px 14px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+
+  .navigator.open div.profile {
+    width: 250px;
+  }
+
+  .navigator div .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .navigator div img {
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+
+  .navigator div.profile .name,
+  .navigator div.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .navigator div.profile .job {
+    font-size: 12px;
+  }
+
+  .navigator .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+  }
+
+  .navigator.open .profile #log_out {
+    width: 50px;
+    opacity: 0;
+  }
+
+  .navigator.open .profile:hover #log_out {
+    opacity: 1;
+  }
+
+  .navigator.open .profile #log_out:hover {
+    opacity: 1;
+    color: red;
+  }
+
+  .navigator .profile #log_out:hover {
+    color: red;
+  }
+
+  .navigator.open ~ .home-section {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .my-scroll-active {
+    overflow-y: auto;
+  }
+
+  #my-scroll {
+    overflow-y: auto;
+    height: calc(100% - 60px);
+  }
+
+  #my-scroll::-webkit-scrollbar {
+    display: none;
+    /* background-color: rgba(255, 255, 255, 0.2);
+    width: 10px;
+    border-radius:5px  */
+  }
+}

@@ -1,14 +1,9 @@
-const apiEndPoint = '/api';
-const apiVersion = 'v1';
-const baseURL = `${apiEndPoint}/${apiVersion}`;
-
-
+const API_HOST = process.env.REACT_APP_API_URL;
 
 export const API_URL = {
-  TEST: {
-    SAMPLE: `${baseURL}/sample`,
-  },
-  SUGGESTION: {
-    GET_MESSAGE: `${baseURL}/suggestion/message`,
-  },
+    LOGIN: {
+        authentication: `${API_HOST}/login`,
+    },
+
 };
+

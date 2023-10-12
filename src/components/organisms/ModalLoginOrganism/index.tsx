@@ -27,7 +27,7 @@ export const ModalLoginOrganism = () => {
                 value={emailValue}
                 setInputValue={setEmailValue}
                 error={errors.find(item => item.name === "email")}
-                className='mb-8'
+                className='mb-6'
             />
             <TextInputWithTitle
                 name='password'

@@ -1,6 +1,6 @@
 import {createBrowserRouter,} from "react-router-dom";
-import {LoginPage} from "../components/pages/LoginPage.tsx";
+import {Index} from "../components/pages/LoginPage";
 
 export const router = createBrowserRouter([
-    {path: "/", Component: LoginPage},
+    {path: "/", Component: Index},
 ]);

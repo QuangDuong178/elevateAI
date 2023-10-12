@@ -1,3 +1,6 @@
+import {RepositoriesInterface, RepositoryFactory} from "@/repositories/repository.ts";
+import http from "@/plugins/http.ts";
+
 export const validateEmail = (email: string) => {
     return email
         .toLowerCase()
@@ -9,3 +12,7 @@ export const validateEmail = (email: string) => {
 export const validateEmpty = (value: string) => {
     return value.trim().length !== 0;
 };
+
+export const getRepository = (type: keyof RepositoriesInterface) => {
+    return RepositoryFactory.create(type)(http);
+}
