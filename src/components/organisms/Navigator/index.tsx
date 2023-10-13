@@ -1,20 +1,73 @@
-import { Layout, Menu } from 'antd';
-import { useNavigator } from '@/composables/useNavigator.tsx';
-import "./style.scss"
+import {Image, Layout} from 'antd';
+import {useNavigator} from '@/composables/useNavigator.ts';
+import "./style.scss";
+import logo from "@/assets/img/logo.png";
+import collapse from "@/assets/img/collapse-icon.png";
+import {CSSTransition} from "react-transition-group";
 
 export const Navigator = () => {
-  const { Sider } = Layout;
-  const { menuItems } = useNavigator();
-  return (
-    <Sider className={'navigator-organism'} collapsible width={300}>
-      <div className={'demo-logo-vertical'}></div>
-      <Menu
-        theme='dark'
-        mode='inline'
-        defaultSelectedKeys={['1']}
-        items={menuItems}
-      />
+    const {Sider} = Layout;
+    const {menuItems, isCollapsed, handleActionSidebar} = useNavigator();
+    return (
+        <Sider className={"navigator-organism"} width={"max-content"}>
+            <div className={`sidebar ${isCollapsed ? 'open' : ''}`}>
+                <div className="menu-item logo-details">
+                    <img src={logo} alt="menu-logo" className="menu-logo bx"/>
+                    <CSSTransition unmountOnExit={true} timeout={300} in={isCollapsed}
+                                   classNames="slide-fade">
+                        <div
+                            className={'logo-name ml-2'}>ElevateAI
+                        </div>
+                    </CSSTransition>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        flexGrow: 1,
+                        maxHeight: 'calc(100% - 60px)',
+                    }}
+                >
+                    <div id="my-scroll" className="my-scroll-active">
+                        <ul className="nav-list" style={{overflow: 'visible'}}>
+                            {menuItems.map((menuItem, index) => (
+                                <li key={index}>
 
-    </Sider>
-  );
+                                    <div className="menu-item">
+                                        <a href={menuItem.link}>
+                                            <Image preview={false} src={menuItem.icon} className="bx image-icon"/>
+
+                                            <CSSTransition unmountOnExit={true} timeout={300} in={isCollapsed}
+                                                           classNames="slide-fade">
+                                                <span
+                                                    className={'links_name ml-4'}>{menuItem.name}</span>
+                                            </CSSTransition>
+                                        </a>
+                                    </div>
+
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="flex justify-end sidebar-collapse">
+                            <img src={collapse} onClick={handleActionSidebar}/>
+                        </div>
+                    </div>
+
+                    {/*<div className="profile">*/}
+                    {/*    <div className="profile-details">*/}
+                    {/*        <div className="menu-item">*/}
+                    {/*            <el-image src={user.avatar} className="bx image-icon"/>*/}
+                    {/*            <transition name="slide-fade">*/}
+                    {/*                <span*/}
+                    {/*                    className={isCollapsed ? 'links_name ml-4' : 'links_name ml-4'}>{isCollapsed && user.name}</span>*/}
+                    {/*            </transition>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                </div>
+            </div>
+        </Sider>
+
+    );
 };

@@ -1,7 +1,6 @@
-import {ReactNode} from "react";
-
 export interface MenuItem {
-    key: number,
-    icon: ReactNode,
-    label: string,
+    link: string;
+    name: string;
+    tooltip: string;
+    icon: src;
 }
