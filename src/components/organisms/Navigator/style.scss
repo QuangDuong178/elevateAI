@@ -2,60 +2,73 @@
   border-right: 2px solid #C6C6C8;
 
   .open {
-    //.menu-item {
-    //  padding: 16px 40px;
-    //}
+    .show-info{
+
+    }
+
+    .profile {
+      .menu-item {
+        background-color: white;
+      }
+    }
+
+    .menu-item {
+      background-color: white;
+      transition: background-color 0.5s, padding 0.3s;
+      padding: 16px 16px 16px 40px;
+    }
 
     .nav-list {
-      li {
-        .menu-item {
-          background-color: white;
-          transition: background-color 0.5s, padding 0.3s;
+      .menu-item {
+        &:hover {
+          background: #00a6da;
 
-          &:hover {
-            background: #00a6da;
-
-            a {
-              color: white;
-            }
-
+          a {
+            color: white;
           }
+
         }
       }
     }
   }
 
   li + li {
-    border-bottom: 1px solid #f2f1f5;
+    border-top: 1px solid #f2f1f5;
   }
 
   .menu-item {
-    transition: padding 0.3s;
-    padding: 12px 24px;
-    height: 62px;
+    transition: padding 0.3s, background-color 0.5s;
+    padding: 12px 16px 12px 24px;
     background-color: #f2f1f5;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .links_name {
+      transition: opacity 0.5s;
+    }
   }
 
   .menu-logo {
     min-width: 30px;
     max-width: 30px;
   }
+  .sidebar-icon {
+    margin-top: 11px;
+    margin-right: 14px;
+    transition: margin-right 0.5s;
+    //
+    &.collapsed{
 
-  .menu-item {
-    .links_name {
-      transition: opacity 0.5s;
+      margin-right: 27px;
+      img {
+        transform: rotate(-180deg);
+      }
     }
-  }
-
-  .sidebar-collapse {
     img {
-      transform: rotate(-180deg);
-      height: 24px;
-      width: 24px;
-    }
 
-    padding-top: 16px;
-    padding-right: 16px;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .sidebar {
@@ -188,6 +201,21 @@
       }
     }
   }
+
+  .profile {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    transition: all 1s ease;
+    overflow: hidden;
+
+    .ant-avatar {
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+
 
   .slide-fade-enter {
     opacity: 1;

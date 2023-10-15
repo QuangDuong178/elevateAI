@@ -4,13 +4,22 @@ import NewIcon from '@/assets/img/new-icons.png';
 import ToolIcon from '@/assets/img/tool-icon.png';
 import PromptIcon from '@/assets/img/prompt-icon.png';
 import OjtIcon from '@/assets/img/ojt-icon.png';
+import Avatar from '@/assets/img/avatar.png';
 import {APP_ROUTE} from "@/constant/routes.ts";
 import {useState} from "react";
+import { Account } from '@/types/models/account.ts';
 
 export const useNavigator = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
     const handleActionSidebar = () => {
         setIsCollapsed(!isCollapsed)
+    }
+
+    const user : Account = {
+        email : "email.com",
+        password: "password",
+        avatar :Avatar,
+        name:"山田 太郎"
     }
 
     const menuItems: Array<MenuItem> = [
@@ -47,6 +56,7 @@ export const useNavigator = () => {
     ];
 
     return {
+        user,
         menuItems,
         isCollapsed,
         handleActionSidebar
