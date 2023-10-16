@@ -3,7 +3,8 @@ export const APP_ROUTE = {
     LOGIN: '/login',
     DASHBOARD: '/dashboard',
     AI_NEWS: '/ai-news',
+    AI_AGENT: '/ai-agent',
     AI_IT_TOOLS: '/ai-it-tools',
-    PROMPT: '/prompt',
+    PROMPT: '/ai-prompt',
     AI_OJT: '/ai-ojt',
 }

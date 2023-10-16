@@ -1,9 +1,9 @@
-import {LayoutHome} from '@/layouts/LayoutHome';
+import {LayoutDefault} from "@/layouts/LayoutDefault";
 
 export const HomePage = () => {
     return (
-        <LayoutHome>
+        <LayoutDefault>
 
-        </LayoutHome>
+        </LayoutDefault>
     );
 };

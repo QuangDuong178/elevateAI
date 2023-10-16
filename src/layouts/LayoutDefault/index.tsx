@@ -5,7 +5,7 @@ import {Navigator} from "@/components/organisms/Navigator";
 type Props = {
     children: ReactNode
 }
-export const LayoutHome = (props: Props) => {
+export const LayoutDefault = (props: Props) => {
     const {Content} = Layout;
     const {children} = props;
     return <Layout className='h-screen bg-bg-grey-184'>

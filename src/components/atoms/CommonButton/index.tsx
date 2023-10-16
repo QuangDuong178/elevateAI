@@ -8,8 +8,7 @@ type ButtonProps = {
 }
 
 export const CommonButton = (props: ButtonProps) => {
-    return <Button onClick={props.handleClick} className={"button-atoms " + props.className}
-                   type={"primary"}>
+    return <Button onClick={props.handleClick} className={"button-atoms " + props.className}>
         {props.content}
     </Button>
 }
