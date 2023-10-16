@@ -1,0 +1,16 @@
+.layout-default {
+  .ant-layout-content {
+    transition: padding-left 0.5s;
+    padding-top: 56px;
+
+    &.collapsed {
+      padding-left: 286px;
+      padding-right: 286px;
+    }
+
+    &.un-collapsed {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
+  }
+}

@@ -7,10 +7,15 @@ import dot from '@/assets/img/3dot.png';
 import {CSSTransition} from 'react-transition-group';
 import {Link} from "react-router-dom";
 
+interface NavigatorProps {
+    isCollapsed: boolean,
+    handleCollapse: () => void
+}
 
-export const Navigator = () => {
+export const Navigator = (props: NavigatorProps) => {
     const {Sider} = Layout;
-    const {user, menuItems, isCollapsed, isShowPopper, handleClickShowPopper, handleActionSidebar} = useNavigator();
+    const {isCollapsed, handleCollapse} = props
+    const {user, menuItems, isShowPopper, handleClickShowPopper} = useNavigator();
 
     const ContentPopper = () => {
         return <ul className={"popover-navigator py-4"}>
@@ -32,9 +37,7 @@ export const Navigator = () => {
                         </div>
                     </CSSTransition>
                 </div>
-                <div className={"content flex justify-between flex-col relative"}
-
-                >
+                <div className={"content flex justify-between flex-col relative"}>
                     <div>
                         <ul className='nav-list' style={{overflow: 'visible'}}>
                             {menuItems.map((menuItem, index) => (
@@ -62,7 +65,7 @@ export const Navigator = () => {
                             ))}
                         </ul>
                         <div className={`flex justify-end sidebar-icon ${isCollapsed ? '' : 'collapsed'}`}>
-                            <img src={collapse} onClick={handleActionSidebar} alt={''}/>
+                            <img src={collapse} onClick={handleCollapse} alt={''}/>
                         </div>
                         <CSSTransition unmountOnExit={true} timeout={300} in={isCollapsed}
                                        classNames='slide-fade'>

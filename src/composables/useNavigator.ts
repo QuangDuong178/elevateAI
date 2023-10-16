@@ -11,11 +11,7 @@ import {useState} from "react";
 import {Account} from '@/types/models/account.ts';
 
 export const useNavigator = () => {
-    const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
     const [isShowPopper, setShowPopper] = useState<boolean>(false);
-    const handleActionSidebar = () => {
-        setIsCollapsed(!isCollapsed)
-    }
 
     const handleClickShowPopper = () => {
         setShowPopper(!isShowPopper)
@@ -66,10 +62,8 @@ export const useNavigator = () => {
     return {
         user,
         menuItems,
-        isCollapsed,
         isShowPopper,
         handleClickShowPopper,
-        handleActionSidebar
     };
 
 };
