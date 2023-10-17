@@ -1,38 +1,50 @@
 import {Title} from "@/components/atoms/Title";
 import {AINewsHome} from "@/components/molecules/AINewsHome";
 import {useModalHomeOrganism} from "@/composables/useModalHomeOrganism.ts";
+import {Image} from "antd";
+import {Link} from "react-router-dom";
+import "./style.scss"
+import {AiPromptHome} from "@/components/molecules/AIPromptHome";
 
 
 export const ModalHomeOrganism = () => {
-    const {aiNewList} = useModalHomeOrganism();
-    return <div>
+    const {aiNewList, aiToolList, aiPromptList} = useModalHomeOrganism();
+    console.log(aiToolList)
+    return <div className={"modal-home-organism"}>
         <div>
             <Title text={"AI News"}/>
             <div className={"grid grid-cols-3 gap-x-4 mt-4"}>
-                {/*<AINewsHome tag={"業務改善"} date={"2023/10/22"}*/}
-                {/*            title={"エンジニアによるChatGPT活用術10選【Qiitaから厳選】 | 株式会社SaaSis"}*/}
-                {/*            description={"今回の記事では、エンジニアに関する知識を記録・共有するためのサービス「Qiita」でバズったChatGPTに関する記事を紹介します！ "}*/}
-                {/*            link={"#"}/>*/}
-                {/*<AINewsHome tag={"業務改善"} date={"2023/10/22"}*/}
-                {/*            title={"エンジニアによるChatGPT活用術10選【Qiitaから厳選】 | 株式会社SaaSis"}*/}
-                {/*            description={"今回の記事では、エンジニアに関する知識を記録・共有するためのサービス「Qiita」でバズったChatGPTに関する記事を紹介します！ "}*/}
-                {/*            link={"#"}/>*/}
-                {/*<AINewsHome tag={"業務改善"} date={"2023/10/22"}*/}
-                {/*            title={"エンジニアによるChatGPT活用術10選【Qiitaから厳選】 | 株式会社SaaSis"}*/}
-                {/*            description={"今回の記事では、エンジニアに関する知識を記録・共有するためのサービス「Qiita」でバズったChatGPTに関する記事を紹介します！ "}*/}
-                {/*            link={"#"}/>*/}
-                {aiNewList.map(item => (
-                    <AINewsHome aiNews={item}/>
+                {aiNewList.map((item, index) => (
+                    <AINewsHome key={index} aiNews={item}/>
                 ))}
             </div>
         </div>
-        <div className={"mt-10 grid grid-cols-2 gap-x-14 "}>
-            <div className={"mt-4"}>
+        <div className={"mt-10 grid grid-cols-2 gap-x-14 mb-4"}>
+            <div>
                 <Title text={"よく使うAIツール"}/>
-                <div className={"ai-tools"}>
+                <div className={"ai-tools mt-4 bg-white"}>
                     <ul>
-                        <li></li>
+                        {aiToolList.map(item => (
+                            <li key={item.no} className={"px-6 py-4 flex justify-between place-items-center"}>
+                                <div className={"flex place-items-center"}>
+                                    <Image height={30} width={35} src={item.image} preview={false} alt={item.name}/>
+                                    <h4 className={"ml-2"}>{item.name}</h4>
+                                </div>
+                                <Link to={item.link} className={"btn-use rounded-full flex place-items-center"}>
+                                    使用する
+                                </Link>
+                            </li>
+                        ))}
+
                     </ul>
+                </div>
+            </div>
+            <div>
+                <Title text={"よく使うプロンプト"}/>
+                <div className={"ai-prompt grid grid-cols-3 gap-x-2 mt-4"}>
+                    {aiPromptList.map((item,index) => (
+                        <AiPromptHome aiPrompt={item} />
+                    ))}
                 </div>
             </div>
 

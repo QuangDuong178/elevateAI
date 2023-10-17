@@ -4,6 +4,7 @@ import {Title} from "@/components/atoms/Title";
 import {TextInputWithTitle} from "@/components/molecules/TextInputWithTitle";
 import {CommonCheckbox} from "@/components/atoms/CommonCheckbox";
 import {CommonButton} from "@/components/atoms/CommonButton";
+import {PasswordInputWithTitle} from "@/components/molecules/PasswordInputWithTitle";
 
 export const ModalLoginOrganism = () => {
     const {
@@ -29,7 +30,7 @@ export const ModalLoginOrganism = () => {
                 error={errors.find(item => item.name === "email")}
                 className='mb-6'
             />
-            <TextInputWithTitle
+            <PasswordInputWithTitle
                 name='password'
                 title='パスワード'
                 placeHolder=''

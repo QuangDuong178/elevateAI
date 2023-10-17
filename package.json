@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
     "@mui/material": "^5.14.12",
     "@mui/styled-engine-sc": "^5.14.12",
     "antd": "^5.9.4",

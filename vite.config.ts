@@ -5,7 +5,7 @@ import {fileURLToPath, URL} from 'url';
 import dotenv from 'dotenv';
 
 const env = dotenv.config({
-    path: `.env.${process.env.NODE_ENV}`,
+    path: `.env`,
 }).parsed;
 
 

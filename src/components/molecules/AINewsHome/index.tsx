@@ -7,7 +7,7 @@ type AINewsHomeProps = {
 }
 
 export const AINewsHome = (props: AINewsHomeProps) => {
-    const {originalArticlePostingDateAndTime, distinguish, articleTitle, tag, link, overview} = props.aiNews
+    const {originalArticlePostingDateAndTime, distinguish, articleTitle, link, overview} = props.aiNews
     return (
         <div className={"ai-news-home-molecules bg-white"}>
             <div className={"information"}>
