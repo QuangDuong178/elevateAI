@@ -7,4 +7,12 @@
   .ai-news-content{
     margin-top: 62px;
   }
+  .table-content {
+    border-radius: 16px;
+    border: 1px solid #DCDBDF;
+    background: #FFF;
+    .ant-col + .ant-col {
+      border-top: 1px solid #D6D6D6;
+    }
+  }
 }

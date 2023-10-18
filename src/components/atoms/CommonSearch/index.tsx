@@ -1,5 +1,4 @@
-import {SearchOutlined} from "@ant-design/icons";
-import React, {ChangeEvent} from "react";
+import {ChangeEvent} from "react";
 import "./style.scss"
 
 type CommonSearchProps = {
