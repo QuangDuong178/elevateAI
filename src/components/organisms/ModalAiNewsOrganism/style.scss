@@ -4,15 +4,47 @@
     width: 420px;
 
   }
-  .ai-news-content{
+
+  .ai-news-content {
     margin-top: 62px;
   }
+
+  .table-header {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.16px;
+  }
+
   .table-content {
+
     border-radius: 16px;
     border: 1px solid #DCDBDF;
     background: #FFF;
-    .ant-col + .ant-col {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+
+    .ant-row + .ant-row {
       border-top: 1px solid #D6D6D6;
+    }
+
+    .distinguish {
+      min-width: 123px;
+      border-radius: 20px;
+      border: 1px solid #00A6DA;
+      background: #FFF;
+      color: #00A6DA;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.16px;
     }
   }
 }
