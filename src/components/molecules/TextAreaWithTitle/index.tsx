@@ -1,25 +1,26 @@
 import React, {RefObject} from 'react';
+import {TextInput} from '@/components/atoms/TextInput';
 import '@/components/molecules/TextInputWithTitle/style.scss';
 import {ErrorType} from "@/types/models/error.ts";
-import {PasswordInput} from "@/components/atoms/PasswordInput";
+import {CommonTextArea} from "@/components/atoms/CommonTextArea";
 
-type PasswordInputWithTitleProps = {
+type TextInputProps = {
     className?: string;
     title: string;
     name: string;
     placeHolder: string;
     error?: ErrorType;
-    inputRef: RefObject<HTMLInputElement>
+    inputRef : RefObject<HTMLInputElement>
 };
 
-export const PasswordInputWithTitle = React.memo((props: PasswordInputWithTitleProps) => {
-    const {className, title, name, placeHolder, error, inputRef} =
+export const TextAreaWithTitle = React.memo((props: TextInputProps) => {
+    const {className, title, name, placeHolder, error,inputRef} =
         props;
 
     return (
-        <div className={'password-input-with-title ' + className}>
+        <div className={'text-input-with-title ' + className}>
             <h3 className={'mb-2'}>{title}</h3>
-            <PasswordInput
+            <CommonTextArea
                 name={name}
                 placeHolder={placeHolder}
                 inputRef={inputRef}

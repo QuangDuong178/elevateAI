@@ -12,8 +12,6 @@ export const ModalLoginOrganism = () => {
         passwordValue,
         remember,
         errors,
-        setEmailValue,
-        setPasswordValue,
         setRemember,
         handleClickLogin
     } =
@@ -25,8 +23,7 @@ export const ModalLoginOrganism = () => {
                 name='email'
                 title='メールアドレス'
                 placeHolder=''
-                value={emailValue}
-                setInputValue={setEmailValue}
+                inputRef={emailValue}
                 error={errors.find(item => item.name === "email")}
                 className='mb-6'
             />
@@ -34,8 +31,7 @@ export const ModalLoginOrganism = () => {
                 name='password'
                 title='パスワード'
                 placeHolder=''
-                value={passwordValue}
-                setInputValue={setPasswordValue}
+                inputRef={passwordValue}
                 error={errors.find(item => item.name === "password")}
             />
 

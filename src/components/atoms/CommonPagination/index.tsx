@@ -14,5 +14,7 @@ export const CommonPagination = (props: CommonPaginationProps) => {
         <Pagination onChange={onPageChange} defaultPage={selected} className={`pagination-atoms ${className}`} size={"medium"}
                     showFirstButton={true}
                     showLastButton={true}
+                    page={selected}
+
                     count={total} siblingCount={0} variant="outlined" shape="rounded"/>)
 }
