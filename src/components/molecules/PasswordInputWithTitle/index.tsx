@@ -1,5 +1,5 @@
 import React, {RefObject} from 'react';
-import '@/components/molecules/TextInputWithTitle/style.scss';
+import '@/components/molecules/InputWithTitle/style.scss';
 import {ErrorType} from "@/types/models/error.ts";
 import {PasswordInput} from "@/components/atoms/PasswordInput";
 

@@ -17,7 +17,7 @@ export const CommonTextArea = React.memo((props: CommonTextAreaProps) => {
             <Input.TextArea
                 ref={props.inputRef}
                 placeholder={props.placeHolder}
-                autoSize={{ minRows: 6 ,maxRows: 6}}
+                autoSize={{ minRows: 4 ,maxRows: 4}}
             />
             {props.error && <p className={'error'}>{props.error.message}</p>}
         </div>

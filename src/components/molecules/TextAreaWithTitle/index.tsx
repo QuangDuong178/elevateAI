@@ -1,6 +1,6 @@
 import React, {RefObject} from 'react';
 import {TextInput} from '@/components/atoms/TextInput';
-import '@/components/molecules/TextInputWithTitle/style.scss';
+import '@/components/molecules/InputWithTitle/style.scss';
 import {ErrorType} from "@/types/models/error.ts";
 import {CommonTextArea} from "@/components/atoms/CommonTextArea";
 
