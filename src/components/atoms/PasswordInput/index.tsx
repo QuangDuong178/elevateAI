@@ -1,21 +1,21 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { Input } from 'antd';
 import './style.scss';
 import { ErrorType } from '@/types/models/error.ts';
 
 type PasswordInputProps = {
-    name: string;
-    placeHolder: string;
-    error?: ErrorType;
+  placeHolder: string;
+  error?: ErrorType;
 };
 
 export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
-    (props, ref) => {
-        return (
-            <div className={'password-input-atoms'}>
-                <Input.Password ref={ref} placeholder={props.placeHolder} />
-                {props.error && <p className={'error'}>{props.error.message}</p>}
-            </div>
-        );
-    }
+  (props, ref) => {
+    const { placeHolder, error } = props;
+    return (
+      <div className={'password-input-atoms'}>
+        <Input.Password ref={ref} placeholder={placeHolder} />
+        {error && <p className={'error'}>{error.message}</p>}
+      </div>
+    );
+  },
 );
