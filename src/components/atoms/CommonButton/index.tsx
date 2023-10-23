@@ -12,4 +12,5 @@ export const CommonButton = (props: ButtonProps) => {
   return <Button ghost={props.isOutline} onClick={props.handleClick} className={'button-atoms ' + props.className}>
     {props.content}
   </Button>;
+
 };

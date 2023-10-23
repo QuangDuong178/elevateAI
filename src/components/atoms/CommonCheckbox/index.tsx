@@ -1,4 +1,4 @@
-import {Checkbox} from 'antd';
+import { Checkbox } from 'antd';
 import './style.scss';
 
 type CheckBoxProps = {

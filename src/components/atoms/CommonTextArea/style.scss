@@ -5,6 +5,16 @@
     border-radius: 6px;
     border: 1px solid #D6D6D6;
     background: #FFF;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #AFAFAF;
+    }
   }
 
   .error {

@@ -1,4 +1,4 @@
-import { RefObject } from 'react';
+import { forwardRef } from 'react';
 import { Select } from 'antd';
 import './style.scss';
 
@@ -9,13 +9,12 @@ export type OptionSelect = {
 type SelectProps = {
   name: string;
   options: Array<OptionSelect>,
-  inputRef: RefObject<HTMLSelectElement>
 };
-export const CommonSelect = (props: SelectProps) => {
+export const CommonSelect = forwardRef<HTMLSelectElement, SelectProps>((props, ref) => {
   return <Select
     className={'input-atoms'}
-    ref={props.inputRef}
+    ref={ref}
     defaultValue={props.options[0].value}
     options={props.options}
   />;
-};
+});

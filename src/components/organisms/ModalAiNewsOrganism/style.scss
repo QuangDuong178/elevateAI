@@ -6,49 +6,106 @@
   }
 
   .ai-news-content {
+    height: 70vh;
     margin-top: 62px;
-    .table {
 
+    .table-news {
       overflow: auto;
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
 
-      .table-header {
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        letter-spacing: 0.16px;
+      &::-webkit-scrollbar-track {
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #AFAFAF;
       }
 
       .table-content {
+        height: fit-content;
+        min-width: 1200px;
 
-        border-radius: 16px;
-        border: 1px solid #DCDBDF;
-        background: #FFF;
-        color: #000;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 0.16px;
-
-        .ant-row + .ant-row {
-          border-top: 1px solid #D6D6D6;
+        &::-webkit-scrollbar {
+          width: 5px;
+          height: 5px;
+          padding-top: 10px;
+          margin-left: 10px;
+          margin-bottom: 10px;
         }
 
-        .distinguish {
-          min-width: 123px;
-          border-radius: 20px;
-          border: 1px solid #00A6DA;
+        &::-webkit-scrollbar-track {
+          border-radius: 5px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          margin-left: 10px;
+          margin-bottom: 10px;
+          background-color: #AFAFAF;
+        }
+
+        .table-header {
+          color: #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.16px;
+        }
+
+        .table-body{
+          max-height: 60vh;
+
+          overflow: auto;
+          border-radius: 16px;
+          border: 1px solid #DCDBDF;
           background: #FFF;
-          color: #00A6DA;
+          color: #000;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.16px;
+
+          .ant-row + .ant-row {
+            border-top: 1px solid #D6D6D6;
+          }
+
+          .distinguish {
+            min-width: 123px;
+            border-radius: 20px;
+            border: 1px solid #00A6DA;
+            background: #FFF;
+            color: #00A6DA;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.16px;
+          }
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            padding-top: 10px;
+          }
+
+          &::-webkit-scrollbar-track {
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+
+            background-color: #AFAFAF;
+          }
         }
       }
+
     }
   }
 

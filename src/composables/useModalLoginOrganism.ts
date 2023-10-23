@@ -6,7 +6,7 @@ import {ErrorType} from "@/types/models/error.ts";
 
 export const useModalLoginOrganism = () => {
     const navigate = useNavigate()
-    const emailValue = useRef<string>('');
+    const emailValue = useRef<HTMLInputElement>('');
     const passwordValue= useRef<string>('');
     const [remember, setRemember] = useState<boolean>(false);
     const [errors, setErrors] = useState<Array<ErrorType>>([])
@@ -14,6 +14,7 @@ export const useModalLoginOrganism = () => {
     const handleClickLogin = async () => {
         // const ctx = getCurrentInstance().appContext.config.globalProperties;
         const errorList: Array<ErrorType> = [];
+        console.log(emailValue)
         if (!validateEmpty(emailValue.current.input.value) || !validateEmail(emailValue.current.input.value)) {
             errorList.push({
                 name: 'email',

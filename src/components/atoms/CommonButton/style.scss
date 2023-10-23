@@ -2,6 +2,9 @@
   &:not(.ant-btn-background-ghost) {
     background-color: #00A6DA;
     color: #ffffff;
+    &:not(:disabled):not(.ant-btn-disabled):hover {
+      color: white;
+    }
   }
   &.ant-btn-background-ghost{
     border-color: #00A6DA;
@@ -13,4 +16,6 @@
   padding-top: 13px;
   padding-bottom: 13px;
   height: fit-content;
+
+
 }

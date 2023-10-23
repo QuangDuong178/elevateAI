@@ -41,7 +41,7 @@ export const ModalLoginOrganism = () => {
 
       <div className={'text-center'}>
         <CommonCheckbox className={'mt-10'} label={'ログイン状態を保存する'} value={remember}
-                        handleClick={() => setRemember(!remember)} />
+          handleClick={() => setRemember(!remember)} />
       </div>
       <div className={'text-center'}>
         <CommonButton className={'btn-login mt-4'} content={'ログイン'} handleClick={handleClickLogin} />

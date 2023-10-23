@@ -1,10 +1,11 @@
-.modal-atoms{
+.modal-atoms {
   .ant-modal-body {
     padding-right: 48px;
     border-bottom: 1px solid #D6D6D6;
     padding-bottom: 40px;
-    max-height: 65vh;
+    max-height: 80vh;
     overflow: auto;
+
     &::-webkit-scrollbar {
       width: 4px;
     }
@@ -17,10 +18,13 @@
       background-color: #AFAFAF;
     }
   }
-  .ant-modal-content{
-    padding: 40px 0 40px 48px;
-    .ant-modal-header{
-      margin-bottom: 40px;
+
+  .ant-modal-content {
+    padding: 0;
+
+    .ant-modal-header {
+      padding: 40px 48px;
+
       .ant-modal-title {
         color: #000;
         font-size: 32px;
@@ -31,9 +35,16 @@
       }
 
     }
+
+    .ant-modal-body {
+      padding: 0 48px 40px 48px;
+    }
   }
+
   .ant-modal-footer {
-    padding: 16px;
+    padding: 16px 24px;
+    margin-top: 0;
+
     .button-atoms {
       padding-top: 3px;
       padding-bottom: 3px;
