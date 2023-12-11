@@ -9,7 +9,6 @@ import {AiPromptHome} from "@/components/molecules/AIPromptHome";
 
 export const ModalHomeOrganism = () => {
     const {aiNewList, aiToolList, aiPromptList} = useModalHomeOrganism();
-    console.log(aiToolList)
     return <div className={"modal-home-organism"}>
         <div>
             <Title text={"AI News"}/>

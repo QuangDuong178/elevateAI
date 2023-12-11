@@ -42,24 +42,24 @@ export const ModalAINewsOrganism = () => {
       <div className={'table-news w-full'}>
         <div className={'table-content'}>
           <Row className={'mb-2 table-header mx-4'}>
-            <Col className={'flex px-3 place-items-center'} span={3}>
+            <Col className={'flex text-ellipsis whitespace-pre-line place-items-center'} span={3}>
               <span>元記事投稿日時</span>
               <Image height={'10px'} width={'12px'} preview={false} className={'ml-2'} src={Vector} />
             </Col>
-            <Col className={'flex justify-center place-items-center '} span={4}>
+            <Col className={'flex justify-center whitespace-pre-line place-items-center '} span={4}>
               <span>区分</span>
               <Image height={'10px'} width={'12px'} preview={false} className={'ml-2'}
                      src={Vector} /></Col>
-            <Col className={'text-center'} span={6}>記事タイトル</Col>
-            <Col className={'text-center'} span={7}>概要</Col>
-            <Col className={'text-center pr-10'} span={3}>タグ</Col>
+            <Col className={'flex whitespace-pre justify-center place-items-center text-ellipsis'} span={6}>記事タイトル</Col>
+            <Col className={'flex whitespace-pre-line justify-center place-items-center text-ellipsis'} span={7}>概要</Col>
+            <Col className={'flex whitespace-pre-line justify-center place-items-center text-ellipsis pr-10'} span={3}>タグ</Col>
           </Row>
           <div className={'table-body '}>
             {data.map((item, index) => (
               <Row key={index} className={'py-6 mx-4 '}>
-                <Col className={'text-left text-ellipsis whitespace-nowrap pr-5'}
+                <Col className={'text-left whitespace-pre-line pr-5'}
                      span={3}>{item.originalArticlePostingDateAndTime}</Col>
-                <Col className={'text-center text-ellipsis whitespace-nowrap px-5'} span={4}>
+                <Col className={'text-center text-ellipsis overflow-x-hidden px-5'} span={4}>
                   <div className={'distinguish w-full'}>{item.distinguish}</div>
                 </Col>
                 <Col className={'text-center whitespace-nowrap overflow-x-hidden px-5'}

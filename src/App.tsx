@@ -5,6 +5,7 @@ import {LoginPage} from "@/components/pages/LoginPage";
 import {APP_ROUTE} from '@/constant/routes.ts';
 import {HomePage} from '@/components/pages/HomePage';
 import {AINewsPage} from "@/components/pages/AINewsPage";
+import {AIAgentPage} from "@/components/pages/AIAgentPage";
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
                 <Route path={APP_ROUTE.HOME} element={<HomePage/>}>
                 </Route>
                 <Route path={APP_ROUTE.AI_NEWS} element={<AINewsPage/>}>
+                </Route>
+                <Route path={APP_ROUTE.AI_AGENT} element={<AIAgentPage/>}>
                 </Route>
             </Routes>
         </BrowserRouter>

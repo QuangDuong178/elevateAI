@@ -100,8 +100,6 @@ export const Navigator = (props: NavigatorProps) => {
                             </div>
                         </div>
                     </Popover>
-
-
                 </div>
             </div>
         </Sider>

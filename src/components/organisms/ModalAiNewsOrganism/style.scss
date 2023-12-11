@@ -10,7 +10,6 @@
     margin-top: 62px;
 
     .table-news {
-      overflow: auto;
       &::-webkit-scrollbar {
         width: 5px;
         height: 5px;
@@ -26,27 +25,7 @@
 
       .table-content {
         height: fit-content;
-        min-width: 1200px;
-
-        &::-webkit-scrollbar {
-          width: 5px;
-          height: 5px;
-          padding-top: 10px;
-          margin-left: 10px;
-          margin-bottom: 10px;
-        }
-
-        &::-webkit-scrollbar-track {
-          border-radius: 5px;
-          margin-left: 10px;
-          margin-bottom: 10px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          margin-left: 10px;
-          margin-bottom: 10px;
-          background-color: #AFAFAF;
-        }
+        white-space: nowrap;
 
         .table-header {
           color: #000;
@@ -55,12 +34,13 @@
           font-weight: 600;
           line-height: normal;
           letter-spacing: 0.16px;
+
         }
 
         .table-body{
           max-height: 50vh;
 
-          overflow: auto;
+          overflow-y: auto;
           border-radius: 16px;
           border: 1px solid #DCDBDF;
           background: #FFF;
@@ -76,7 +56,8 @@
           }
 
           .distinguish {
-            min-width: 123px;
+            overflow: hidden;
+            text-overflow: ellipsis;
             border-radius: 20px;
             border: 1px solid #00A6DA;
             background: #FFF;
@@ -91,16 +72,17 @@
             width: 5px;
             height: 5px;
             padding-top: 10px;
+            border-radius: 10px;
           }
 
           &::-webkit-scrollbar-track {
             border-radius: 5px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
           }
 
           &::-webkit-scrollbar-thumb {
-
+            border-radius: 20px;
             background-color: #AFAFAF;
           }
         }
@@ -108,7 +90,4 @@
 
     }
   }
-
-
-
 }

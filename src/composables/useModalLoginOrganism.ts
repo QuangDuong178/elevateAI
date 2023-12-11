@@ -34,7 +34,7 @@ export const useModalLoginOrganism = () => {
       //     email: emailValue,
       //     password: passwordValue
       // })
-      navigate(APP_ROUTE.AI_NEWS);
+      navigate(APP_ROUTE.HOME);
     }
     setErrors(errorList);
   };
