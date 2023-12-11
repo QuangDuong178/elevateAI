@@ -1,18 +1,21 @@
+import "./style.scss"
 
 type AIChatNoteProps = {
     title: string,
     content: string,
+    cssClass: string,
 }
 
-export const AIChatNote = () => {
+export const AIChatNote = (props: AIChatNoteProps) => {
+    const {title, content, cssClass} = props
     return (
-        <div>
+        <div className={"ai-agent-note-atom " + cssClass}>
             <h3>
-
+                {title}
             </h3>
-            <div className={"border"}>
-
-            </div>
+            <span className={"mt-2 h-20 max-h-max border w-full flex py-1.5 px-4 bg-neutral-100"}>
+                {content}
+            </span>
         </div>
     )
 }
