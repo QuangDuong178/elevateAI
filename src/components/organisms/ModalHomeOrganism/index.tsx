@@ -42,7 +42,7 @@ export const ModalHomeOrganism = () => {
                 <Title text={"よく使うプロンプト"}/>
                 <div className={"ai-prompt grid grid-cols-3 gap-x-2 mt-4"}>
                     {aiPromptList.map((item,index) => (
-                        <AiPromptHome aiPrompt={item} />
+                        <AiPromptHome key={index} aiPrompt={item} />
                     ))}
                 </div>
             </div>

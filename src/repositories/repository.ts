@@ -1,14 +1,15 @@
 import {RepositoryLogin} from "@/repositories/repository-login.ts";
+import {RepositoryIdea} from "@/repositories/repository-idea";
 
 export interface RepositoriesInterface {
 
     login: typeof RepositoryLogin
-    // message: typeof RepositoryMessage;
+    idea: typeof RepositoryIdea;
 }
 
 const repositories: RepositoriesInterface = {
     login: RepositoryLogin,
-    // message: RepositoryMessage,
+    idea: RepositoryIdea,
 };
 
 export const RepositoryFactory = {

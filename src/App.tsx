@@ -1,27 +1,11 @@
-import './App.css'
-import '@/styles/global.scss'
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {LoginPage} from "@/components/pages/LoginPage";
-import {APP_ROUTE} from '@/constant/routes.ts';
-import {HomePage} from '@/components/pages/HomePage';
-import {AINewsPage} from "@/components/pages/AINewsPage";
-import {AIAgentPage} from "@/components/pages/AIAgentPage";
+import './assets/css/App.css'
+import '@/assets/scss/styles.scss'
+import { RouterProvider } from "react-router-dom";
+import { router } from "@/router/router";
 
 function App() {
-
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path={APP_ROUTE.LOGIN} element={<LoginPage/>}>
-                </Route>
-                <Route path={APP_ROUTE.HOME} element={<HomePage/>}>
-                </Route>
-                <Route path={APP_ROUTE.AI_NEWS} element={<AINewsPage/>}>
-                </Route>
-                <Route path={APP_ROUTE.AI_AGENT} element={<AIAgentPage/>}>
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <><RouterProvider router={router}/></>
     );
 }
 

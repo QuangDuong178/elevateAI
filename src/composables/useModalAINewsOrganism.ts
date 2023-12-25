@@ -54,9 +54,9 @@ export const useModalAINewsOrganism = () => {
     }
 
     const handleClickOk = () => {
-        console.log("ahihi")
         handleOpenModal();
     }
+
     const [data, setData] = useState<Array<AiNews>>([
         {
             originalArticlePostingDateAndTime: "2023年12月1日16:00",

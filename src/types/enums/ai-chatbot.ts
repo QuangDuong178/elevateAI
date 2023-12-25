@@ -1,3 +1,14 @@
 export enum AIChatType {
-    TEXT = "TEXT", USER_INPUT = "USER_INPUT", BOT_CONFIRM = "BOT_CONFIRM", BUTTON_NEXT_STEP = "BUTTON_NEXT_STEP"
+    USER_TYPED = "USER_TYPED",
+    BOT_CONFIRM = "BOT_CONFIRM",
+    BOT_TYPED = "BOT_TYPED",
+    ERROR = "ERROR",
+}
+
+export enum AgentNoteType {
+    SUGGEST = "SUGGEST",
+    IDEA = "IDEA",
+    OVERVIEW = "OVERVIEW",
+    DETAIL = "DETAIL",
+    SOLUTION = "SOLUTION",
 }

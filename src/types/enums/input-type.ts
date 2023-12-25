@@ -1,4 +1,4 @@
- export enum InputType {
+export enum InputType {
     TEXT,
     AREA,
     PASSWORD,

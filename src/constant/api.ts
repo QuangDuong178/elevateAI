@@ -1,9 +1,16 @@
-const API_HOST = process.env.REACT_APP_API_URL;
+const apiEndPoint = '/api';
+const apiVersion = 'v1';
+const baseURL = `${apiEndPoint}/${apiVersion}`;
 
 export const API_URL = {
-    LOGIN: {
-        authentication: `${API_HOST}/login`,
+    AUTH: {
+        LOGIN: `${baseURL}/login`,
     },
-
+    IDEA: {
+        GET_IDEA :`${baseURL}/chatbot/validate-idea`,
+        OVERVIEW :`${baseURL}/chatbot/generate-overview`,
+        DETAIL :`${baseURL}/chatbot/generate-detail`,
+        SOLUTION :`${baseURL}/chatbot/generate-solution`,
+    }
 };
 

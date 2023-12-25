@@ -13,7 +13,7 @@ export const AIChatNote = (props: AIChatNoteProps) => {
             <h3>
                 {title}
             </h3>
-            <span className={"mt-2 h-20 max-h-max border w-full flex py-1.5 px-4 bg-neutral-100"}>
+            <span className={"rounded-[10px] mt-2 h-fit border w-full flex py-1.5 px-4 bg-neutral-100"}>
                 {content}
             </span>
         </div>

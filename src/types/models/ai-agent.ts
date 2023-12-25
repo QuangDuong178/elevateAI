@@ -1,12 +1,36 @@
-import {AIChatType} from "@/types/enums/ai-chatbot.ts";
+import {AgentNoteType, AIChatType} from "@/types/enums/ai-chatbot";
 
-export type AIAgentChat = {
-    text: string,
-    content: string,
-    type: AIChatType,
-}
-
-export type AIAgentNote = {
+export type AgentChat = {
     title: string,
-    content: string,
+    content : string,
+    chatType: AIChatType,
+    reflectFlg?: boolean,
+    nextFlag?: boolean,
+    question?: string,
+    currentNode?: AgentNoteType,
+    nextNode?: AgentNoteType,
+    currentIdx?: number
+    nextIdx?: number
 }
+
+export type AgentNote = {
+    title: string,
+    content : string,
+    question?: string,
+    questionIndex?: number | undefined,
+    type?: AgentNoteType,
+}
+
+export type Question = {
+    id: number,
+    title: string,
+    question: string,
+    title_detail: string,
+    question_detail: string,
+    description:string,
+}
+
+export type AIAgentNotes = Array<AgentNote>;
+export type AIAgentChats = Array<AgentChat>;
+export type IdeaQuestions = Array<Question>;
+
